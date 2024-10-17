@@ -67,7 +67,7 @@ class Tapper:
         self.energy_limit = 1000
         self.special_task = []
         self.hash = None
-        self.my_ref = "1729165832653351"
+        self.my_ref = ""
         self.ready_to_check_special_task = []
 
 
@@ -76,7 +76,7 @@ class Tapper:
         if settings.REF_LINK != "":
             ref_param = settings.REF_LINK.split('=')[1]
         else:
-            ref_param = "1729165832653351"
+            ref_param = ""
         ref_param = random.choices([self.my_ref, ref_param], weights=[30, 70])
         if proxy:
             proxy = Proxy.from_str(proxy)
